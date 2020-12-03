@@ -63,7 +63,6 @@ function loadVideos(path) {
     }
   };
   xhttp.open("GET", "https://lorenz.ecn.purdue.edu/~zhu0/dnn-coding/getvideos.php?path=" + path, true);
-  xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
   xhttp.send();
 }
 
