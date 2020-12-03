@@ -62,7 +62,7 @@ function loadVideos(path) {
       createLinks(path, obj);
     }
   };
-  xhttp.open("GET", "getvideos.php?path=" + path, true);
+  xhttp.open("GET", "https://lorenz.ecn.purdue.edu/~zhu/dnn-coding/getvideos.php?path=" + path, true);
   xhttp.send();
 }
 
