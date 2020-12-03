@@ -56,7 +56,6 @@ function createLinks(path, items) {
 
 function loadVideos(path) {
   var xhttp = new XMLHttpRequest();
-  xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var obj = JSON.parse(this.responseText);
@@ -64,6 +63,7 @@ function loadVideos(path) {
     }
   };
   xhttp.open("GET", "https://lorenz.ecn.purdue.edu/~zhu/dnn-coding/getvideos.php?path=" + path, true);
+  xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
   xhttp.send();
 }
 
