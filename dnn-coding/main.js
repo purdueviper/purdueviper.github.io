@@ -56,6 +56,7 @@ function createLinks(path, items) {
 
 function loadVideos(path) {
   var xhttp = new XMLHttpRequest();
+  xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var obj = JSON.parse(this.responseText);
